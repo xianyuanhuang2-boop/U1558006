@@ -1,0 +1,75 @@
+/* 基本網頁排版設定 */
+body {
+    font-family: Arial, "Microsoft JhengHei", sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* 圖片藝廊網格排版 */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1100px;
+}
+
+/* 圖片卡片樣式 */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 設定平滑動畫時間 */
+}
+
+/* 圖片大小設定 */
+.card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease; /* 圖片本身也可以有微調效果 */
+}
+
+/* 圖片下方文字 */
+.caption {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* 指令 4：滑鼠移過 -> 圖片會動（放大並浮起） */
+.card:hover {
+    transform: translateY(-8px); /* 卡片往上浮動 */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover img {
+    transform: scale(1.05); /* 圖片微微放大 */
+}
